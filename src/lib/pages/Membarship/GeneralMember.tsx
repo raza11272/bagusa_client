@@ -41,10 +41,10 @@ const GeneralMember = () => {
     <div>
       {excdata && (
         <TeamMember
-          title={"Executive Committee"}
+          title={"General Members"}
           teamtype="team"
           data={excdata.bagGeneralMembers.data}
-          heading={"meet with our Executive Committee   "}
+          heading={"meet the general members"}
         />
       )}
     </div>
