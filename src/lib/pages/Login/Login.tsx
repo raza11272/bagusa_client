@@ -57,7 +57,7 @@ const Login = () => {
 
   if (data) {
     localStorage.setItem("jwt", data.login.jwt);
-    toast.success("User login successfu");
+    toast.success("User logged in successfully");
     navigate("/createpost");
   }
 
@@ -74,8 +74,8 @@ const Login = () => {
         },
       },
     });
-
-    toast.success("User login successfully");
+   
+    // toast.success("User login successfully");
   }
   return (
     <div className="max-w-md m-auto sectionpadding">
