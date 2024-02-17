@@ -1,4 +1,4 @@
-import { Mail, Send } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const CheckMail = () => {
   return (
@@ -9,8 +9,8 @@ const CheckMail = () => {
       <Mail className="" size={48} />
       <h1 className="inline-flex gap-3 capitalize ">
         
-        <Send size={16} />
-        check your mail and verify your account
+{/*         <Send size={16} /> */}
+        Wait for an admin approval!
       </h1>
     </div>
   );
