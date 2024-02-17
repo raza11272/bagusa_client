@@ -135,7 +135,7 @@ const Login = () => {
           </p>
         </form>
       </Form>
-      {error && <h1>{error.message}</h1>}
+      {error && <h1 className="text-red-500 text-center text-lg">{error.message}</h1>}
     </div>
   );
 };
