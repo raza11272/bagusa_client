@@ -42,8 +42,8 @@ const BagHistory = () => {
 
   return (
     <div className="sectionpadding sectiontext">
-            <div className="titlemb">
-   <SectionHeading title={"BAG History"} subtitle={"History of this association"} />
+            <div className="titlemb text-lg">
+   <SectionHeading title={"BAG History"}  />
                  </div>
       <div className="w-full">
         <BlocksRenderer content={content} />
