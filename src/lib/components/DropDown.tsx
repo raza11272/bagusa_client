@@ -6,7 +6,7 @@ import {
   DropdownMenuContent,
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
-  //   DropdownMenuRadioItem,
+  DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -34,9 +34,13 @@ export function DropdownMenuRadioGroupDemo({ name, links }: DropProps) {
             //@ts-ignore
             links.map((item, index) => (
               //@ts-ignore
-              <div className="px-4 py-2" key={index} value="bottom">
+               <DropdownMenuRadioItem
+                className="px-4 py-2"
+                key={index}
+                value="top"
+              >
                 {item.link}
-              </div>
+              </DropdownMenuRadioItem>
             ))}
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
