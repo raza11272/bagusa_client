@@ -1,5 +1,6 @@
 import LoaderSpin from "@/lib/components/LoaderSpin";
 import { gql, useQuery } from "@apollo/client";
+import SectionHeading from "@/lib/components/Heading/SectionHeading";
 
 import {
   BlocksRenderer,
@@ -38,6 +39,9 @@ const AboutBag = () => {
 
   return (
     <div className="sectionpadding sectiontext">
+          <div className="titlemb text-lg">
+        <SectionHeading title={"About BAG"}  />
+      </div>
       <div className="w-full">
         <BlocksRenderer content={content} />
       </div>
