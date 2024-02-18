@@ -124,9 +124,7 @@ body {
 .sectiontext h2 {
   @apply text-6xl mb-10;
 }
-.sectiontext h3 {
-  @apply text-5xl mb-10;
-}
+
 .sectiontext h4 {
   @apply text-4xl mb-10;
 }
