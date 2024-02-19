@@ -16,7 +16,8 @@ import { Navigation, Autoplay,Pagination } from "swiper/modules";
 import { useQuery, gql } from "@apollo/client";
 import LoaderSpin from "@/lib/components/LoaderSpin";
 import SectionHeading from "@/lib/components/Heading/SectionHeading";
- 
+ import SingleTeamCard from "@/lib/components/SingleTeamCard";
+
 const Home = () => {
   const GET_HOME_ALL = gql`
     query {
