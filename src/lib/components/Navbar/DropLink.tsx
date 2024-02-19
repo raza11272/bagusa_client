@@ -23,6 +23,7 @@ const DropLink = ({ name, path }: NavbarProps) => {
                 isActive,
             }) => (isActive ? "active" : "")} `}
         >
+             {/* @ts-ignore */}
             <DropdownMenuRadioItem className="list-none">
                 {name}
             </DropdownMenuRadioItem>
