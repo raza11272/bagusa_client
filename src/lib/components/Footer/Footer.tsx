@@ -150,7 +150,7 @@ const Footer = () => {
             © 2024 Developed By
             <a
               href="https://webwes.com/"
-              className="text-primary hover:underline ml-1"
+              className="text-primary font-bold hover:underline ml-1"
               target="_blank"
             >
               @WebWes Digital Agency
