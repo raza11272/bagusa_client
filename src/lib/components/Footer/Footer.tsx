@@ -132,14 +132,14 @@ const Footer = () => {
           </div>
 
           <div className=" md:mx-0   p-4 text-center md:text-left md:mt-0 mt-10">
-            <a className="flex title-font font-medium items-center justify-start  text-gray-900">
+{/*             <a className="flex title-font font-medium items-center justify-start  text-gray-900">
 {/*               <div className="h-14 w-14">
                 <img src="/img/logo.webp" alt="" />
               </div> */}
-              <span className="ml-3 text-xl text-secondary-foreground  capitalize">
+{/*               <span className="ml-3 text-xl text-secondary-foreground  capitalize">
                  Bangladesh Association Of Georgia
-              </span>
-            </a>
+              </span> */}
+            </a> */}
     
           </div>
         </div>
