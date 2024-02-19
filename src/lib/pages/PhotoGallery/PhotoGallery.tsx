@@ -43,7 +43,7 @@ const PhotoGallery = () => {
           data.photoGalleries.data.map((item, index) => (
             <div>
               <div className="flex flex-col">
-                <h1 className="text-3xl mb-10 font-semibold" key={index}>
+                <h1 className="text-3xl mb-10 text-primary font-bold" key={index}>
                   {item.attributes.title}
                 </h1>
                 <div className=" columns-1 md:columns-2 lg:columns-3  gap-6">
