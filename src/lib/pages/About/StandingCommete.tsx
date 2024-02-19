@@ -43,7 +43,7 @@ const StandingCommete = () => {
           title={"Standing Committee"}
           teamtype="team"
           data={excdata.standingCommittees.data}
-          heading={"meet our standing committe"}
+          heading={"meet our standing committee"}
         />
       ) : (
         <div className="h-[100vh] flex justify-center items-center ">
