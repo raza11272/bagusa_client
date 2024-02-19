@@ -137,7 +137,7 @@ const Footer = () => {
                 <img src="/img/logo.webp" alt="" />
               </div>
               <span className="ml-3 text-xl text-secondary-foreground  capitalize">
-                bagusaonline
+                Bangladesh Association of Georgia
               </span>
             </a>
     
