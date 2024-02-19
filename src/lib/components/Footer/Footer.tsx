@@ -50,7 +50,7 @@ const Footer = () => {
 
   return (
     <footer className="text-secondary   mt-auto  w-full bg-secondary  body-font">
-      <div className="container border-b  border-muted-foreground  px-6 lg:px-16 py-8 mx-auto  md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex flex-col">
+      <div className="container   border-muted-foreground  px-6 lg:px-16 py-8 mx-auto  md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex flex-col">
         <div className="flex flex-wrap w-full lg:flex-nowrap justify-between ">
           <div className=" w-full px-4">
             <h2 className="title-font text-secondary-foreground font-medium text-lg mb-3">Page Links</h2>
@@ -137,20 +137,20 @@ const Footer = () => {
                 <img src="/img/logo.webp" alt="" />
               </div>
               <span className="ml-3 text-xl text-secondary-foreground  capitalize">
-                Bangladesh Association of Georgia
+                bagusaonline
               </span>
             </a>
     
           </div>
         </div>
       </div>
-      <div className="bg-secondary">
+      <div className="bg-primary">
         <div className="container mx-auto px-6 py-4 md:px-16 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-secondary-foreground  text-sm text-center sm:text-left">
+          <p className="text-secondary  text-sm text-center sm:text-left">
             © 2024 Developed By
             <a
               href="https://webwes.com/"
-              className="text-primary font-bold hover:underline ml-1"
+              className="text-secondary font-bold hover:underline ml-1"
               target="_blank"
             >
               @WebWes Digital Agency
@@ -161,25 +161,25 @@ const Footer = () => {
             <span className="inline-flex gap-2 sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <a
                 href={data.socialLink.data.attributes.facebook}
-                className="text-secondary-foreground hover:text-primary"
+                className="text-secondary hover:text-primary"
               >
                 <Facebook size={24} />
               </a>
               <a
                 href={data.socialLink.data.attributes.twiter}
-                className="text-secondary-foreground hover:text-primary"
+                className="text-secondary hover:text-primary"
               >
                 <Twitter size={24} />
               </a>
               <a
                 href={data.socialLink.data.attributes.instagram}
-                className="text-secondary-foreground hover:text-primary"
+                className="text-secondary hover:text-primary"
               >
                 <Instagram size={24} />
               </a>
               <a
                 href={data.socialLink.data.attributes.linkedin}
-                className="text-secondary-foreground hover:text-primary"
+                className="text-secondary hover:text-primary"
               >
                 <Linkedin size={24} />
               </a>
