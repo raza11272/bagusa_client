@@ -162,7 +162,7 @@ const Home = () => {
             </p>
           </div>
           <Link to={"/baghistory"}>
-            <Button size={"lg"}>Lern more</Button>
+            <Button size={"lg"}>Learn more</Button>
           </Link>
         </div>
       </section>
@@ -171,7 +171,7 @@ const Home = () => {
           title={"Executive Committee"}
           teamtype="team"
           data={excdata.executiveCommittees.data}
-          heading={"meet with our Executive Committee   "}
+          heading={"Meet our Executive Committee"}
         />
       )}
       {/* <DoWantMember /> */}
@@ -214,7 +214,7 @@ const HeroSection = ({ img, title, dec }: herosectionProps) => {
         </h1>
         <p className="text-muted lg:w-[60%]  text-lg">{dec}</p>
         <Link to="/aboutus">
-          <Button size={"lg"}>Lern More</Button>
+          <Button size={"lg"}>Learn More</Button>
         </Link>
       </div>
     </div>
