@@ -168,6 +168,7 @@ const Home = () => {
         </div>
       </section>
 
+  <div className="sectionpadding">
      
       <div className="titlemb">
         <SectionHeading
@@ -227,7 +228,7 @@ const Home = () => {
 
 
       </Swiper>
-
+</div>
 {/*       {excdata && (
         <TeamMember
           title={"Executive Committee"}
