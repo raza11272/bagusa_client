@@ -247,8 +247,8 @@ const Home = () => {
            </div>
        <div className="grid lg:grid-cols-2 gap-6">
 
-      <ReactPlayer url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
-      <ReactPlayer url='https://youtu.be/7PIji8OubXU?si=GXNmvv4jPnFvZqXD' />
+      <ReactPlayer  width="100%" url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+      <ReactPlayer  width="100%" url='https://youtu.be/7PIji8OubXU?si=GXNmvv4jPnFvZqXD' />
        </div>
       </div>
     </div>
