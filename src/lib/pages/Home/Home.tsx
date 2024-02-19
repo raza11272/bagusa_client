@@ -4,7 +4,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import TeamMember from "../About/TeamMember";
+// import TeamMember from "../About/TeamMember";
 // import DoWantMember from "../Membarship/DoWantMember";
 import Testimonials from "./Testimonials";
 // import React from 'react'
@@ -12,7 +12,7 @@ import ReactPlayer from 'react-player/youtube'
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay,Pagination } from "swiper/modules";
 import { useQuery, gql } from "@apollo/client";
 import LoaderSpin from "@/lib/components/LoaderSpin";
 import SectionHeading from "@/lib/components/Heading/SectionHeading";
@@ -166,14 +166,75 @@ const Home = () => {
           </Link>
         </div>
       </section>
-      {excdata && (
+
+     
+      <div className="titlemb">
+        <SectionHeading
+          title={"Executive Committee"}
+        // subtitle={"Community advertisement"}
+        />
+      </div>
+      <Swiper
+        spaceBetween={24}
+        breakpoints={{
+          425: {
+            width: 426,
+            slidesPerView: 1,
+          },
+          768: {
+            width: 768,
+            slidesPerView: 3, 
+          },
+          1024: {
+            width: 1024,
+            slidesPerView: 3,
+          },
+        }}
+        centeredSlides={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination, Autoplay]}
+        className="mySwiper"
+      >
+
+        {/* @ts-ignore */}
+        <div className="  grid gap-8  md:grid-cols-3 lg:grid-cols-4">
+          {excdata &&
+            //@ts-ignore
+            excdata.executiveCommittees.data.map((item, index) => (
+              <SwiperSlide key={index}>
+                <SingleTeamCard
+                  //@ts-ignore
+                  // key={index}
+                  //@ts-ignore
+                  // type={teamtype}
+                  //@ts-ignore
+                  title={item.attributes.title}
+                  //@ts-ignore
+                  name={item.attributes.name}
+                  //@ts-ignore
+                  img={item.attributes.image.data.attributes.url}
+                />
+              </SwiperSlide>
+            ))}
+        </div>
+
+
+      </Swiper>
+
+{/*       {excdata && (
         <TeamMember
           title={"Executive Committee"}
           teamtype="team"
           data={excdata.executiveCommittees.data}
           heading={"Meet our Executive Committee"}
         />
-      )}
+      )} */}
       {/* <DoWantMember /> */}
       {testodata && <Testimonials data={testodata.advertisements.data} />}
       <div className="sectionpadding">
