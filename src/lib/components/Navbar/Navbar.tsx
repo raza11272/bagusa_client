@@ -8,64 +8,66 @@ import { DropdownMenuRadioGroupDemo } from "../DropDown";
 import { useDispatch, useSelector } from "react-redux";
 import { controllNav } from "@/lib/redux/reducers/navbarSlice";
 import { gql, useQuery } from "@apollo/client";
+import DropLink from "./DropLink";
+
 const aboutdroplinks = [
   {
-    link: <NavbarLink name={"BAG History"} path={"/baghistory"} />,
+    link: <DropLink  name={"BAG History"} path={"/baghistory"} />,
   },
   {
-    link: <NavbarLink name={"About BAG"} path={"/aboutbag"} />,
+    link: <DropLink name={"About BAG"} path={"/aboutbag"} />,
   },
   {
-    link: <NavbarLink name={"Executive Committee"} path={"/exccommittee"} />,
+    link: <DropLink name={"Executive Committee"} path={"/exccommittee"} />,
   },
   {
-    link: <NavbarLink name={"Advisors"} path={"/advisors"} />,
+    link: <DropLink name={"Advisors"} path={"/advisors"} />,
   },
   {
-    link: <NavbarLink name={"Standing Committee"} path={"/standingcommitte"} />,
+    link: <DropLink name={"Standing Committee"} path={"/standingcommitte"} />,
   },
 ];
 
 const memberdroplinks = [
   {
     link: (
-      <NavbarLink name={"Membership Guideline"} path={"/membershipguideline"} />
+      <DropLink name={"Membership Guideline"} path={"/membershipguideline"} />
     ),
   },
   {
-    link: <NavbarLink name={"Membership Form"} path={"/membershipform"} />,
+    link: <DropLink name={"Membership Form"} path={"/membershipform"} />,
   },
   {
     link: (
-      <NavbarLink name={"Membership Benefit"} path={"/membershipbenefit"} />
+      <DropLink name={"Membership Benefit"} path={"/membershipbenefit"} />
     ),
   },
   {
-    link: <NavbarLink name={"BAG General Members"} path={"/generalmembers"} />,
+    link: <DropLink name={"BAG General Members"} path={"/generalmembers"} />,
   },
 ];
 const gallerydroplinks = [
   {
-    link: <NavbarLink name={"Photo Gallery"} path={"/photogallery"} />,
+    link: <DropLink name={"Photo Gallery"} path={"/photogallery"} />,
   },
   {
     link: (
-      <NavbarLink name={"Previous Conventions"} path={"/previousconventions"} />
+      <DropLink name={"Previous Conventions"} path={"/previousconventions"} />
     ),
   },
   {
-    link: <NavbarLink name={"BAG Awards"} path={"/bagawards"} />,
+    link: <DropLink name={"BAG Awards"} path={"/bagawards"} />,
   },
 ];
 const payonlinedroplinks = [
   {
-    link: <NavbarLink name={"Pay Annual Membership Fee"} path={"/payannual"} />,
+    link: <DropLink name={"Pay Annual Membership Fee"} path={"/payannual"} />,
   },
   {
-    link: <NavbarLink name={"BAG General Fund"} path={"/baggeneralfund"} />,
+    link: <DropLink name={"BAG General Fund"} path={"/baggeneralfund"} />,
   },
   {
-    link: <NavbarLink name={"Scholarship Fund"} path={"/scholarshipfund"} />,
+    link: <DropLink name={"Scholarship Fund"} path={"/scholarshipfund"} />,
   },
 ];
 
