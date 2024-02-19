@@ -15,7 +15,7 @@ const TeamMember = ({ heading, title, data, teamtype }: TeamProps) => {
       <div className="titlemb ">
         <SectionHeading title={title} subtitle={heading} />
       </div>
-      <div className="  grid gap-8  md:grid-cols-3 lg:grid-cols-4">
+      <div className="  grid gap-8  md:grid-cols-3 lg:grid-cols-5">
         {data &&
           //@ts-ignore
           data.map((item, index) => (
