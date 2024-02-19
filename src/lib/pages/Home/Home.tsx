@@ -213,7 +213,7 @@ const HeroSection = ({ img, title, dec }: herosectionProps) => {
           {title}
         </h1>
         <p className="text-muted lg:w-[60%]  text-lg">{dec}</p>
-        <Link to="/aboutus">
+        <Link to="/aboutbag">
           <Button size={"lg"}>Learn More</Button>
         </Link>
       </div>
