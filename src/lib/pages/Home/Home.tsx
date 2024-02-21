@@ -12,7 +12,7 @@ import ReactPlayer from 'react-player/youtube'
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay,Pagination } from "swiper/modules";
+import { Navigation, Autoplay,Pagination,FreeMode } from "swiper/modules";
 import { useQuery, gql } from "@apollo/client";
 import LoaderSpin from "@/lib/components/LoaderSpin";
 import SectionHeading from "@/lib/components/Heading/SectionHeading";
@@ -177,30 +177,33 @@ const Home = () => {
         />
       </div>
       <Swiper
-        spaceBetween={24}
-        breakpoints={{
-          425: {
-            width: 426,
-            slidesPerView: 1,
-          },
-          768: {
-            width: 768,
-            slidesPerView: 3, 
-          },
-          1024: {
-            width: 1024,
-            slidesPerView: 3,
-          },
-        }}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, Autoplay]}
+          breakpoints={{
+            425: {
+              width: 426,
+              slidesPerView: 1,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 3,
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 3,
+            },
+          }}
+          slidesPerView={3}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          // centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            // disableOnInteraction: false,
+          }}
+         
+          modules={[FreeMode, Autoplay, Pagination]}
         className="mySwiper"
       >
 
