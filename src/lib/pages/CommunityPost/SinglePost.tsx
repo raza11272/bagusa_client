@@ -7,7 +7,7 @@ export const SinglePost = ({ title, description, id, image }) => {
     <Link to={`/communitydashboard/${id}`} className="cursor-pointer ">
       <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
         <img
-          className="lg:h-48 md:h-36 w-full object-cover object-center"
+          className="h-[30vh] w-full object-cover object-center"
           src={image && image}
           alt="blog"
         />
