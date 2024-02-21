@@ -10,7 +10,8 @@ const CheckMail = () => {
       <h1 className="inline-flex gap-3 capitalize ">
         
 {/*         <Send size={16} /> */}
-        Wait for an admin approval!
+          Thank you for your registration. <br/>
+        Wait for an admin approval.
       </h1>
     </div>
   );
