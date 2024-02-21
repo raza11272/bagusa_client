@@ -37,7 +37,6 @@ return (
             slidesPerView: 3,
           },
         }}
-{/*         slidesPerView={3} */}
         spaceBetween={30}
         freeMode={true}
         pagination={{
