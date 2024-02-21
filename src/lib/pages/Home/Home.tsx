@@ -154,7 +154,7 @@ const Home = () => {
 
         <div className="flex  gap-10 lg:gap-12  flex-col">
           <div className="flex flex-col gap-4">
-            <h3 className="heading">About us</h3>
+            <h3 className="heading border-primary  border-l-4 pl-2">About us</h3>
             <h1 className="title text-secondary-foreground">
               {aboutdata && aboutdata.aboutus.data.attributes.title}
             </h1>
