@@ -141,7 +141,7 @@ const Home = () => {
       </section>
       {/* about us section */}
 
-      <section className="grid gap-8 lg:gap-12 sectionpadding lg:grid-cols-2">
+      <section className="bg-green-100 grid gap-8 lg:gap-12 sectionpadding lg:grid-cols-2">
         <div className="rounded-md overflow-hidden">
           {aboutdata && (
             <img
@@ -168,7 +168,7 @@ const Home = () => {
         </div>
       </section>
 
-  <div className="sectionpadding">
+  <div className="sectionpadding bg-red-50">
      
       <div className="titlemb">
         <SectionHeading
@@ -239,7 +239,7 @@ const Home = () => {
       )} */}
       {/* <DoWantMember /> */}
       {testodata && <Testimonials data={testodata.advertisements.data} />}
-      <div className="sectionpadding">
+      <div className="sectionpadding bg-blue-100">
 
         <div className="mb-10">
          <SectionHeading
