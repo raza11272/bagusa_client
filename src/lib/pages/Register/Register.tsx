@@ -92,7 +92,7 @@ const Register = () => {
         input: {
           email: values.email,
           password: values.password,
-          username: `${values.fname}${values.lname}`,
+          username: `${values.fname} ${values.lname}`,
         },
       },
     });
