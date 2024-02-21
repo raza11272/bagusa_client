@@ -6,7 +6,7 @@ import SectionHeading from "@/lib/components/Heading/SectionHeading";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination,FreeMode } from "swiper/modules";
+import { Autoplay, Pagination, FreeMode } from "swiper/modules";
 
 type TestoProps = {
   data?: [];
@@ -23,30 +23,6 @@ return (
         />
       </div>
       <Swiper
-{/*         spaceBetween={24}
-        breakpoints={{
-          425: {
-            width: 426,
-            slidesPerView: 1,
-          },
-          768: {
-            width: 768,
-            slidesPerView: 3,
-          },
-          1024: {
-            width: 1024,
-            slidesPerView: 3,
-          },
-        }}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, Autoplay]} */}
        breakpoints={{
           425: {
             width: 426,
