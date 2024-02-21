@@ -205,7 +205,7 @@ const MemberShipForm = () => {
             {previewImage ? (
               <img src={previewImage} alt="Preview" />
             ) : (
-              <p>Drag 'n' drop an image here, or click to select one</p>
+              <p>Upload an image</p>
             )}
           </div>
         </div>
