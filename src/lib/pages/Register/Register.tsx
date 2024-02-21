@@ -98,13 +98,13 @@ const Register = () => {
     });
 
     if (values.password !== values.confirmpassword) {
-      setMatchPass("confirmpassword not match with you password");
+      setMatchPass("Confirm password does not match with you password");
     } else {
       setMatchPass("");
     }
     navigate("/checkmail");
     toast.success(
-      "😀User registration successfully .Thanks for your registration"
+      "User registered successfully. Thanks for your registration"
     );
   }
 
