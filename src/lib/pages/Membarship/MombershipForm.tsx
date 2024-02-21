@@ -49,9 +49,7 @@ const formSchema = z.object({
   streetaddress: z.string().min(2, {
     message: "Street address must be at least 2 characters",
   }),
-  streetaddress2: z.string().min(2, {
-    message: "Street address must be at least 2 characters",
-  }),
+  streetaddress2: z.string(),
   city: z.string(),
   stateprovince: z.string().min(2, {
     message: "State province must be valid",
@@ -221,7 +219,7 @@ const MemberShipForm = () => {
               name="firstname"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>First Name</FormLabel>
+                  <FormLabel>First Name*</FormLabel>
                   <FormControl>
                     <Input
                       type="text"
@@ -239,7 +237,7 @@ const MemberShipForm = () => {
               name="lastname"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel>Last Name*</FormLabel>
                   <FormControl>
                     <Input
                       type="text"
@@ -260,7 +258,7 @@ const MemberShipForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Email*</FormLabel>
                   <FormControl>
                     <Input
                       type="email"
@@ -279,7 +277,7 @@ const MemberShipForm = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>Phone Number*</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
@@ -300,7 +298,7 @@ const MemberShipForm = () => {
             name="gender"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Gender</FormLabel>
+                <FormLabel>Gender*</FormLabel>
                 <FormControl>
                   <RadioGroup
                     onValueChange={field.onChange}
@@ -328,7 +326,7 @@ const MemberShipForm = () => {
             name="streetaddress"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Street Address</FormLabel>
+                <FormLabel>Street Address*</FormLabel>
                 <FormControl>
                   <Input
                     type="text"
@@ -346,7 +344,7 @@ const MemberShipForm = () => {
             name="streetaddress2"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Street Address 2</FormLabel>
+                <FormLabel>Street Address 2 (optional)</FormLabel>
                 <FormControl>
                   <Input
                     type="text"
@@ -365,7 +363,7 @@ const MemberShipForm = () => {
             name="city"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>City</FormLabel>
+                <FormLabel>City*</FormLabel>
                 <FormControl>
                   <Input type="text" placeholder="City" {...field} />
                 </FormControl>
@@ -380,7 +378,7 @@ const MemberShipForm = () => {
             name="stateprovince"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>State / Province</FormLabel>
+                <FormLabel>State / Province*</FormLabel>
                 <FormControl>
                   <Input type="text" placeholder="State / Province" {...field} />
                 </FormControl>
@@ -395,7 +393,7 @@ const MemberShipForm = () => {
             name="zipcode"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Postal / Zip Code</FormLabel>
+                <FormLabel>Postal / Zip Code*</FormLabel>
                 <FormControl>
                   <Input
                     type="text"
