@@ -143,7 +143,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full h-auto z-50   bg-white shadow ">
       <div className="container px-6 md:px-16 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex  items-center justify-between">
-          <div className="w-14 h-14">
+          <div className="w-20 h-20">
             <Link to="/" >
             <img src="/img/logo.webp" alt="" />
             </Link>
