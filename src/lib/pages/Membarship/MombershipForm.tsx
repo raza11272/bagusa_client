@@ -30,7 +30,7 @@ import { gql, useMutation } from "@apollo/client";
 import { toast } from "react-toastify";
 import { useDropzone } from "react-dropzone";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import LoaderSpin from "@/lib/components/LoaderSpin";
 const formSchema = z.object({
   firstname: z.string().min(2, {
@@ -99,7 +99,7 @@ const FILE_UPLOAD = gql`
 `;
 
 const MemberShipForm = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -186,7 +186,10 @@ const MemberShipForm = () => {
     toast.success("thanks for submitting the form");
     // console.log("click");
 
-    navigate("/");
+    // navigate("/");
+    form.reset();
+    //@ts-ignore
+    setPreviewImage("");
     console.table(values);
   }
   return (
