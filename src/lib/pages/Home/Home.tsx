@@ -99,12 +99,26 @@ const Home = () => {
     }
   `;
 
+   const GET_VIDEO_LINKS = gql`
+    query Testimonials {
+      testimonials {
+        data {
+          attributes {
+            authroname
+          }
+        }
+      }
+    }
+  `;
+
   const { loading, error, data } = useQuery(GET_HOME_ALL);
   const { loading: aboutloading, data: aboutdata } = useQuery(GET_ABOUT_DATA);
   const { loading: excloading, data: excdata } = useQuery(GET_ALL_EXCMMITTE);
   const { loading: testoloading, data: testodata } = useQuery(GET_TESTOMONIAL);
+   const { loading: videoloading, data: videodata } = useQuery(GET_VIDEO_LINKS);
+
   //@ts-ignore
-  if ((loading, aboutloading, excloading, testoloading)) return <LoaderSpin />;
+  if ((loading, aboutloading, excloading, testoloading,videoloading)) return <LoaderSpin />;
   if (error) return <p>Error : {error.message}</p>;
 
   // console.log(testodata.testimonials.data);
@@ -141,7 +155,7 @@ const Home = () => {
       </section>
       {/* about us section */}
 
-      <section className="bg-green-100 grid gap-8 lg:gap-12 sectionpadding lg:grid-cols-2">
+      <section className="bg-[#0080002c] grid gap-8 lg:gap-12 sectionpadding lg:grid-cols-2">
         <div className="rounded-md overflow-hidden">
           {aboutdata && (
             <img
@@ -168,7 +182,7 @@ const Home = () => {
         </div>
       </section>
 
-  <div className="sectionpadding bg-red-50">
+  <div className="sectionpadding bg-[#00800015]">
      
       <div className="titlemb">
         <SectionHeading
@@ -241,18 +255,54 @@ const Home = () => {
       )} */}
       {/* <DoWantMember /> */}
       {testodata && <Testimonials data={testodata.advertisements.data} />}
-      <div className="sectionpadding bg-blue-100">
+      <div className="sectionpadding bg-white">
 
         <div className="mb-10">
          <SectionHeading
            title={'Advertisement videos'}
            />
            </div>
-       <div className="grid lg:grid-cols-2 gap-6">
-
-      <ReactPlayer  width="100%" url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
-      <ReactPlayer  width="100%" url='https://youtu.be/7PIji8OubXU?si=GXNmvv4jPnFvZqXD' />
-       </div>
+      <Swiper
+          breakpoints={{
+            425: {
+              width: 426,
+              slidesPerView: 1,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 2,
+            },
+          }}
+          spaceBetween={30}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          // centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            // disableOnInteraction: false,
+          }}
+          modules={[FreeMode, Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          {/* @ts-ignore */}
+          {videodata &&
+           //@ts-ignore
+            videodata.testimonials.data.map((item, index) => (
+          
+              <SwiperSlide key={index}>
+                <ReactPlayer
+                  // width="100%"
+                  url={item.attributes.authroname}
+                />
+              </SwiperSlide>
+            ))}
+        </Swiper>
       </div>
     </div>
   );
