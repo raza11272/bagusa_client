@@ -126,7 +126,7 @@ const Home = () => {
   return (
     <div>
       {/* hero section  */}
-      <section className=" h-[100vh] lg:h-[70vh]">
+      <section className="h-[100vh]">
         <Swiper
           navigation={true}
           centeredSlides={true}
