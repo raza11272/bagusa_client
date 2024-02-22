@@ -1,5 +1,5 @@
 // import { ArrowRight } from "lucide-react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 //@ts-ignore
 export const SinglePost = ({ title, description, id, image }) => {
