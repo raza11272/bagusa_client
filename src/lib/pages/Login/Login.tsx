@@ -15,7 +15,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Link, useNavigate } from "react-router-dom";
 import { gql, useMutation } from "@apollo/client";
+import { useDispatch } from "react-redux";
 import LoaderSpin from "@/lib/components/LoaderSpin";
+import { setUser } from "@/lib/redux/AuthSlice";
 
 const formSchema = z.object({
   email: z.string().min(8, {
@@ -28,6 +30,7 @@ const formSchema = z.object({
 
 const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,6 +60,7 @@ const Login = () => {
 
   if (data) {
     localStorage.setItem("jwt", data.login.jwt);
+     dispatch(setUser(data.login.user));
     toast.success("User logged in successfully");
     navigate("/createpost");
   }
