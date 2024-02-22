@@ -40,7 +40,7 @@ return (
         spaceBetween={30}
         freeMode={true}
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
         // centeredSlides={true}
         autoplay={{
