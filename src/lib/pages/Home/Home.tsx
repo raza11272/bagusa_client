@@ -135,7 +135,7 @@ const Home = () => {
             disableOnInteraction: false,
           }}
           pagination={{
-            clickable: true,
+            clickable: false,
           }}
           modules={[Navigation, Autoplay]}
           className="mySwiper"
@@ -280,7 +280,7 @@ const Home = () => {
           spaceBetween={30}
           freeMode={true}
           pagination={{
-            clickable: true,
+            clickable: false,
           }}
           // centeredSlides={true}
           autoplay={{
