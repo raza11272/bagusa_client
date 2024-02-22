@@ -205,7 +205,9 @@ const Home = () => {
           }}
           spaceBetween={30}
           freeMode={true}
-        
+             pagination={{
+          clickable: true,
+        }}        
           // centeredSlides={true}
           autoplay={{
             delay: 3000,
