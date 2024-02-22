@@ -284,7 +284,7 @@ const Home = () => {
           }}
           // centeredSlides={true}
           autoplay={{
-            delay: 3000,
+            delay: 4000,
             // disableOnInteraction: false,
           }}
           modules={[FreeMode, Autoplay, Pagination]}
@@ -298,6 +298,8 @@ const Home = () => {
               <SwiperSlide key={index}>
                 <ReactPlayer
                   // width="100%"
+                 controls={true}
+                  volume={0}
                   url={item.attributes.authroname}
                 />
               </SwiperSlide>
