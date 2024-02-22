@@ -1,5 +1,5 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+// import { ArrowRight } from "lucide-react";
+// import { Link } from "react-router-dom";
 
 //@ts-ignore
 export const SinglePost = ({ title, description, id, image }) => {
@@ -26,7 +26,7 @@ export const SinglePost = ({ title, description, id, image }) => {
             </p>
           </div>
 
-          <div className="flex items-center  justify-between ">
+{/*           <div className="flex items-center  justify-between ">
             <Link
               to="/singlepost"
               className="text-primary inline-flex  items-center md:mb-2 lg:mb-0"
@@ -34,7 +34,7 @@ export const SinglePost = ({ title, description, id, image }) => {
               Learn More
               <ArrowRight size={16} />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>
