@@ -111,7 +111,7 @@ const Navbar = () => {
           {jwt ? (
             <NavbarLink name={"Create post"} path={"/createpost"} />
           ) : (
-            <NavbarLink name={"User Login"} path={"/login"} />
+            <DropLink name={"User Login"} path={"/login"} />
           )}
         </div>
       ),
