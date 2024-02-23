@@ -6,7 +6,7 @@ import { gql, useQuery } from "@apollo/client";
 const PhotoGallery = () => {
   const GET_PHOTOGALLERYS = gql`
     query PhotoGallerys {
-      photoGalleries {
+      photoGalleries(sort: "publishedAt:desc") {
         data {
           attributes {
             title
