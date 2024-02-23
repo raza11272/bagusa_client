@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
 import Home from "./lib/pages/Home/Home";
 // import About from "./lib/pages/About/About";
 import CommutityPost from "./lib/pages/CommunityPost/CommutityPost";
@@ -41,6 +42,15 @@ import ErrorPage from "./lib/pages/ErrorPage";
 import CheckMail from "./lib/pages/CheckMail";
 // import LoaderSpin from "./lib/components/LoaderSpin";
 
+const Wrapper = ({ children }) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
+
+
 const App = () => {
   const dispatch = useDispatch();
 
@@ -64,6 +74,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+         <Wrapper>
       <div className="max-w-[1440px] flex flex-col min-h-screen justify-between  m-auto">
         <Navbar />
         <div className="mt-[10vh]">
@@ -112,6 +123,7 @@ const App = () => {
 
         <Footer />
       </div>
+      </Wrapper>
     </BrowserRouter>
   );
 };
