@@ -10,7 +10,7 @@ const PhotoGallery = () => {
         data {
           attributes {
             title
-            image {
+            image(pagination: { limit: 100 }){
               data {
                 attributes {
                   url
