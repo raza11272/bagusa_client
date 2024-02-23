@@ -58,7 +58,7 @@ const App = () => {
 
   useEffect(() => {
     if (data) {
-      dispatch(setUser(data));
+      dispatch(setUser(data.me));
     }
   }, [data]);
 
