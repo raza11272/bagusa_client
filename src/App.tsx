@@ -41,7 +41,7 @@ import CreatePost from "./lib/pages/DashBoard/CreatePost";
 import ErrorPage from "./lib/pages/ErrorPage";
 import CheckMail from "./lib/pages/CheckMail";
 // import LoaderSpin from "./lib/components/LoaderSpin";
-
+//@ts-ignore
 const Wrapper = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
