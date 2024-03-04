@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 //@ts-ignore
-export const SinglePost = ({ title, description, id, image }) => {
+export const SinglePost = ({ title,  id, image }) => {
   return (
     <Link to={`/communitydashboard/${id}`} className="cursor-pointer ">
       <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -17,24 +17,10 @@ export const SinglePost = ({ title, description, id, image }) => {
               {title}
             </h1>
 
-            <p
-              className="leading-relaxed mb-3 text-secondary-foreground  
-           whitespace-nowrap  text-ellipsis
-          "
-            >
-              {description}
-            </p>
+
           </div>
 
-{/*           <div className="flex items-center  justify-between ">
-            <Link
-              to="/singlepost"
-              className="text-primary inline-flex  items-center md:mb-2 lg:mb-0"
-            >
-              Learn More
-              <ArrowRight size={16} />
-            </Link>
-          </div> */}
+
         </div>
       </div>
     </Link>
