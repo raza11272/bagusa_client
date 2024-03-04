@@ -186,9 +186,12 @@ const Home = () => {
           )}
         </div>
 
-        <div className="flex  gap-10 lg:gap-12  flex-col">
-          <div className="flex flex-col gap-4">
+
+        <div className="flex  p-4  group relative ease-in duration-500 rounded-md  cursor-pointer  gap-10 lg:gap-12  flex-col">
+          <div className="absolute h-full w-full duration-300 rounded-full scale-0 group-hover:scale-100 group-hover:rounded-md top-0 left-0 bg-popover"></div>
+          <div className="flex flex-col gap-4 z-30">
             <h3 className="heading border-primary  border-l-4 pl-2">About us</h3>
+
             <h1 className="title text-secondary-foreground">
               {aboutdata && aboutdata.aboutus.data.attributes.title}
             </h1>
@@ -196,7 +199,7 @@ const Home = () => {
               {aboutdata && aboutdata.aboutus.data.attributes.description}
             </p>
           </div>
-          <Link to={"/baghistory"}>
+          <Link to={"/aboutbag"} className="z-30">
             <Button size={"lg"}>Learn more</Button>
           </Link>
         </div>
