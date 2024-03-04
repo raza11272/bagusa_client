@@ -55,7 +55,7 @@ const CommutityPost = () => {
             image={item.attributes.image.data.attributes.url}
               key={index}
               title={item.attributes.Title}
-              description={item.attributes.Description}
+
               id={item.id}
             />
           ))}
