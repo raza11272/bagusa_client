@@ -21,4 +21,6 @@ p {
   @apply text-base mb-4;
 }
 
-
+img{
+   @apply h-[50vh];
+}
