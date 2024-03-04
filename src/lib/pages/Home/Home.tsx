@@ -281,7 +281,7 @@ const Home = () => {
       <section className="sectionpadding bg-[#00800009] ">
         <div className="titlemb">
           <SectionHeading
-            title={"Advertisement posts"}
+            title={"Event News"}
           // subtitle={"Community advertisement"}
           />
         </div>
