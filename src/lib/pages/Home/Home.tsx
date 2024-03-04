@@ -111,6 +111,28 @@ const Home = () => {
     }
   `;
 
+   const GET_PHOTOGALLERYS = gql`
+    query PhotoGallerys {
+      photoGalleries(sort: "publishedAt:desc") {
+        data {
+          attributes {
+            title
+            image(pagination: { limit: 100 }){
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const { loading: imageloading, data: imagedata } = useQuery(GET_PHOTOGALLERYS);
+
+ 
   const { loading, error, data } = useQuery(GET_HOME_ALL);
   const { loading: aboutloading, data: aboutdata } = useQuery(GET_ABOUT_DATA);
   const { loading: excloading, data: excdata } = useQuery(GET_ALL_EXCMMITTE);
@@ -118,7 +140,7 @@ const Home = () => {
    const { loading: videoloading, data: videodata } = useQuery(GET_VIDEO_LINKS);
 
   //@ts-ignore
-  if ((loading, aboutloading, excloading, testoloading,videoloading)) return <LoaderSpin />;
+  if ((loading, aboutloading, excloading, testoloading,videoloading,imageloading)) return <LoaderSpin />;
   if (error) return <p>Error : {error.message}</p>;
 
   // console.log(testodata.testimonials.data);
@@ -251,6 +273,73 @@ const Home = () => {
           heading={"Meet our Executive Committee"}
         />
       )} */}
+
+
+      <section className="sectionpadding bg-[#00800009] ">
+        <div className="titlemb">
+          <SectionHeading
+            title={"Advertisement posts"}
+          // subtitle={"Community advertisement"}
+          />
+        </div>
+        <Swiper
+          breakpoints={{
+            425: {
+              width: 426,
+              slidesPerView: 1,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 3,
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 3,
+            },
+          }}
+          spaceBetween={30}
+          freeMode={true}
+
+          // centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            // disableOnInteraction: false,
+          }}
+
+          modules={[FreeMode, Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          {/* //@ts-ignore */}
+          {imagedata && 
+            //@ts-ignore
+            imagedata.photoGalleries.data.map((item, index) => {
+              {/* console.log(item.attributes.image.data.attributes.url) */ }
+              return (
+                <SwiperSlide key={index}>
+                  {/* @ts-ignore */}
+                  <div className="p-8 h-[40vh] max-w-lg border border-primary rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-start"
+                  >
+                    <div className="h-[20vh] w-full">
+                      <img src={item.attributes.image.data[0].attributes.url} className="shadow rounded-lg w-full h-full  object-cover overflow-hidden border" />
+                    </div>
+                    <div className="mt-8">
+                      <h4 className="font-bold line-clamp-2 text-start text-xl">{item.attributes.title}</h4>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              )
+            })}
+        </Swiper>
+        <div className="mt-16 w-full flex justify-center items-center">
+
+          <Link to="/photogallery" >
+            <Button>View more</Button>
+          </Link>
+        </div>
+      </section>
+
+
+     
       {/* <DoWantMember /> */}
       {testodata && <Testimonials data={testodata.advertisements.data} />}
       <div className="sectionpadding bg-white">
