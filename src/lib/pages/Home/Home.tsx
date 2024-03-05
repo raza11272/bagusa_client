@@ -327,10 +327,10 @@ const Home = () => {
                       <img src={item.attributes.image.data[0].attributes.url} className="shadow rounded-lg w-full h-full  object-cover overflow-hidden border" />
                     </div>
                     <div className="mt-8">
-                      <h4 className="font-bold line-clamp-2 text-start text-xl">{item.attributes.title}</h4>
+                      <h4 className="font-bold line-clamp-2 w-full text-start text-xl">{item.attributes.title}</h4>
                     </div>
                   </div>
-                  </Link>
+                  </Link> 
                 </SwiperSlide>
               )
             })}
