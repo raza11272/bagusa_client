@@ -341,7 +341,78 @@ const Home = () => {
           </Link>
         </div> */}
       </section>
-
+     
+<div className="sectionpadding bg-white">
+        <div className="mb-10">
+          <SectionHeading title={"Event videos"} />
+        </div>
+        <Swiper
+          breakpoints={{
+            425: {
+              width: 426,
+              slidesPerView: 1,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 2,
+            },
+          }}
+          spaceBetween={30}
+          freeMode={true}
+          // centeredSlides={true}
+          autoplay={{
+            delay: 4000,
+            // disableOnInteraction: false,
+          }}
+          modules={[FreeMode, Autoplay, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <ReactPlayer
+              // width="100%"
+              controls={true}
+              volume={0}
+              url="https://youtu.be/MFLVmAE4cqg?si=20maSIERx8bfYVHE"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReactPlayer
+              // width="100%"
+              controls={true}
+              volume={0}
+              url="https://youtu.be/fJ2QrUKvj3U?si=eV83a1Cj-IWnw1Nj"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReactPlayer
+              // width="100%"
+              controls={true}
+              volume={0}
+              url="https://youtu.be/fJ2QrUKvj3U?si=eV83a1Cj-IWnw1Nj"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReactPlayer
+              // width="100%"
+              controls={true}
+              volume={0}
+              url="https://youtu.be/7bOptq-NPJQ?si=NhZR29SUJ_HMunuR"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ReactPlayer
+              // width="100%"
+              controls={true}
+              volume={0}
+              url="https://youtu.be/7bOptq-NPJQ?si=NhZR29SUJ_HMunuR"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </div>
 
      
       {/* <DoWantMember /> */}
