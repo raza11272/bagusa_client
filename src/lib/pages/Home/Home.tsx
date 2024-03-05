@@ -318,7 +318,8 @@ const Home = () => {
             imagedata.photoGalleries.data.map((item, index) => {
               {/* console.log(item.attributes.image.data.attributes.url) */ }
               return (
-                <SwiperSlide key={index}>
+                 <Link to="/photogallery" key={index} >
+                <SwiperSlide >
                   {/* @ts-ignore */}
                   <div className="p-8 h-[40vh] max-w-lg border border-primary rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-start"
                   >
@@ -330,15 +331,15 @@ const Home = () => {
                     </div>
                   </div>
                 </SwiperSlide>
+                  </Link>
               )
             })}
         </Swiper>
-        <div className="mt-16 w-full flex justify-center items-center">
-
+{/*    <div className="mt-16 w-full flex justify-center items-center">
           <Link to="/photogallery" >
             <Button>View more</Button>
           </Link>
-        </div>
+        </div> */}
       </section>
 
 
