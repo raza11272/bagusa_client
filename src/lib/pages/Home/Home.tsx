@@ -319,12 +319,12 @@ const Home = () => {
               {/* console.log(item.attributes.image.data.attributes.url) */ }
               return (
                 <SwiperSlide key={index}>
-                 <Link to="/photogallery"  >
+                 <Link to="/photogallery" className="w-full"  >
                   {/* @ts-ignore */}
                   <div className="p-8 h-[40vh] w-full  border border-primary rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-start"
                   >
                     
-                      <img src={item.attributes.image.data[0].attributes.url} className="shadow rounded-lg w-full h-full  object-fit:cover overflow-hidden border" />
+                      <img src={item.attributes.image.data[0].attributes.url} className="shadow rounded-lg w-full h-full  object-cover object-center overflow-hidden border" />
                    
                     <div className="mt-8">
                       <h4 className="font-bold line-clamp-2 w-full text-start text-xl">{item.attributes.title}</h4>
