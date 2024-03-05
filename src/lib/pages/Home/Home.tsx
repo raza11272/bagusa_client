@@ -319,7 +319,7 @@ const Home = () => {
               {/* console.log(item.attributes.image.data.attributes.url) */ }
               return (
                 <SwiperSlide key={index}>
-                 <Link to="/photogallery" className="w-full"  >
+                 <Link to="/photogallery" className="w-full my-4"  >
                   {/* @ts-ignore */}
                   <div className="p-8 h-[40vh] w-full  border border-primary rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-start"
                   >
