@@ -529,7 +529,7 @@ const EventSections = () => {
   ];
 
   return (
-    <section className="mx-auto bg-primary text-popover sectionpadding">
+    <section className="mx-auto duration-500 ease-in-out hover:bg-secondary-foreground bg-primary text-popover sectionpadding">
       <div className="flex flex-col gap-4">
         <h3 className=" text-popover  text-4xl font-bold  border-popover  border-l-4 pl-2 ">
           Calendar of events
@@ -542,7 +542,7 @@ const EventSections = () => {
           eventdata.map((item, index) => (
             <div
               key={index}
-              className="flex border-l-2 justify-center cursor-pointer hover:bg-popover/10 ease-in-out duration-500 p-4 flex-col "
+              className="flex border-l-2 justify-center p-4 flex-col "
             >
               <h3 className="text-xl font-bold mb-2">{item.name}</h3>
               <p className="text-popover text-sm">Date: {item.date}</p>
