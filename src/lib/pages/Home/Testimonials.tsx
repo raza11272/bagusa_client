@@ -15,7 +15,7 @@ type TestoProps = {
 const Testimonials = ({ data }: TestoProps) => {
 
 return (
-    <section className="sectionpadding bg-[#00800009] ">
+    <section className="sectionpadding  ">
       <div className="titlemb">
         <SectionHeading
           title={"Advertisement posts"}
