@@ -173,6 +173,8 @@ const Home = () => {
             ))}
         </Swiper>
       </section>
+
+     <EventSections />
       {/* about us section */}
 
       <section className="bg-[#0080002c] grid gap-8 lg:gap-12 sectionpadding lg:grid-cols-2">
@@ -342,7 +344,7 @@ const Home = () => {
         </div> */}
       </section>
      
-<div className="sectionpadding bg-white">
+{/* <div className="sectionpadding bg-white">
         <div className="mb-10">
           <SectionHeading title={"Event videos"} />
         </div>
@@ -412,7 +414,7 @@ const Home = () => {
             />
           </SwiperSlide>
         </Swiper>
-      </div>
+      </div> */}
 
      
       {/* <DoWantMember /> */}
@@ -495,5 +497,58 @@ const HeroSection = ({ img, title, dec }: herosectionProps) => {
         </Link>
       </div>
     </div>
+  );
+};
+
+const EventSections = () => {
+  const eventdata = [
+    {
+      name: "Baisakhi Utsav",
+      date: "April 20th, 2024",
+    },
+    {
+      name: "Durga Puja ",
+      date: "October 11th to 13th, 2024",
+    },
+    {
+      name: "Mahalaya September ",
+      date: "March 28th, 2024",
+    },
+    {
+      name: " Lakshmi Puja ",
+      date: "October 19th, 2024",
+    },
+    {
+      name: "Kali Puja ",
+      date: " November 2nd, 2024   ",
+    },
+    {
+      name: "Annual Picnic",
+      date: "November 16th, 2024",
+    },
+  ];
+
+  return (
+    <section className="mx-auto bg-primary text-popover sectionpadding">
+      <div className="flex flex-col gap-4">
+        <h3 className=" text-popover  text-4xl font-bold  border-popover  border-l-4 pl-2 ">
+          Calendar of events
+        </h3>
+      </div>
+      <div className=" grid md:grid-cols-3 gap-6 mt-12">
+    
+        {eventdata &&
+          //@ts-ignore
+          eventdata.map((item, index) => (
+            <div
+              key={index}
+              className="flex border-l-2 justify-center  px-2 flex-col  "
+            >
+              <h3 className="text-xl font-bold mb-2">{item.name}</h3>
+              <p className="text-popover text-sm">Date: {item.date}</p>
+            </div>
+          ))}
+      </div>
+    </section>
   );
 };
