@@ -542,7 +542,7 @@ const EventSections = () => {
           eventdata.map((item, index) => (
             <div
               key={index}
-              className="flex border-l-2 justify-center  px-2 flex-col  "
+              className="flex border-l-2 justify-center cursor-pointer hover:bg-popover/10 ease-in-out duration-500 p-4 flex-col "
             >
               <h3 className="text-xl font-bold mb-2">{item.name}</h3>
               <p className="text-popover text-sm">Date: {item.date}</p>
