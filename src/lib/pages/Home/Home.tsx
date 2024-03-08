@@ -140,7 +140,7 @@ const Home = () => {
    const { loading: videoloading, data: videodata } = useQuery(GET_VIDEO_LINKS);
 
   //@ts-ignore
-  if ((loading, aboutloading, excloading, testoloading,videoloading,imageloading)) return <LoaderSpin />;
+  if ((loading || aboutloading || excloading || testoloading || videoloading || imageloading)) return <LoaderSpin />;
   if (error) return <p>Error : {error.message}</p>;
 
   // console.log(testodata.testimonials.data);
@@ -423,7 +423,7 @@ const Home = () => {
 
         <div className="mb-10">
          <SectionHeading
-           title={'Advertisement videos'}
+           title={'Advertisement & Event Videos'}
            />
            </div>
       <Swiper
