@@ -529,7 +529,7 @@ const EventSections = () => {
   ];
 
   return (
-    <section className="mx-auto duration-500 ease-in-out hover:bg-secondary-foreground bg-primary text-popover sectionpadding">
+    <section className="mx-auto duration-500 ease-in-out  border-8 border-secondary-foreground hover:border-popover text-popover sectionpadding">
       <div className="flex flex-col gap-4">
         <h3 className=" text-popover  text-4xl font-bold  border-popover  border-l-4 pl-2 ">
           Calendar of events
