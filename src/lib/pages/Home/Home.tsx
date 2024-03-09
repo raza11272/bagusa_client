@@ -531,7 +531,7 @@ const EventSections = () => {
   return (
     <section className="mx-auto duration-500 ease-in-out bg-secondary-foreground   border-8 border-secondary-foreground hover:border-popover text-popover px-6 lg:px-16 py-16">
       <div className="flex flex-col gap-4">
-        <h3 className=" text-popover  text-4xl w-fit font-bold  border-popover  border-4 px-2 ">
+        <h3 className=" text-popover  text-4xl w-fit font-bold  border-popover  border-4 py-1 px-2 ">
           Calendar of events
         </h3>
       </div>
