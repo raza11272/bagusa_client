@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route,useLocation } from "react-router-dom";
 import { useLayoutEffect } from "react";
-import Home from "./lib/pages/Home/Home";
+import Devmore from "./lib/pages/Devmore";
+// import Home from "./lib/pages/Home/Home";
 // import About from "./lib/pages/About/About";
 import CommutityPost from "./lib/pages/CommunityPost/CommutityPost";
 // import Membership from "./lib/pages/Membarship/Membership";
@@ -9,8 +10,8 @@ import PhotoGallery from "./lib/pages/PhotoGallery/PhotoGallery";
 import Contactus from "./lib/pages/Contactus/Contactus";
 import Login from "./lib/pages/Login/Login";
 import Register from "./lib/pages/Register/Register";
-import Navbar from "./lib/components/Navbar/Navbar";
-import Footer from "./lib/components/Footer/Footer";
+// import Navbar from "./lib/components/Navbar/Navbar";
+// import Footer from "./lib/components/Footer/Footer";
 import PostDetails from "./lib/pages/CommunityPost/PostDetails";
 import BagHistory from "./lib/pages/About/BagHistory";
 import AboutBag from "./lib/pages/About/AboutBag";
@@ -76,10 +77,10 @@ const App = () => {
     <BrowserRouter>
          <Wrapper>
       <div className="max-w-[1440px] flex flex-col min-h-screen justify-between  m-auto">
-        <Navbar />
+{/*         <Navbar /> */}
         <div className="mt-[10vh]">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Devmore />} />
             {/* about us  */}
             <Route path="/baghistory" element={<BagHistory />} />
             <Route path="/aboutbag" element={<AboutBag />} />
@@ -121,7 +122,7 @@ const App = () => {
           </Routes>
         </div>
 
-        <Footer />
+{/*         <Footer /> */}
       </div>
       </Wrapper>
     </BrowserRouter>
